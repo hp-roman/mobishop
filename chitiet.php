@@ -65,7 +65,8 @@
                     <div class="input-group">
                         <input type="text" class="form-control" placeholder="Nhập từ khóa">
                         <div class="input-group-btn">
-                            <button type="button" class="btn btn-success">
+                            <button type="button" class="btn btn-success" 
+                            style="z-index: 1; position: absolute; height: 100%; top: 0px;">
                                 <i class="glyphicon glyphicon-search"></i>
                             </button>
                         </div>
@@ -77,7 +78,7 @@
                         if(isset($_SESSION['user_name'])){
                             ?>
                                 <li>
-                                    <a><span class ="glyphicon glyphicon-user"></span>
+                                    <a style="margin-left: 30px"><span class ="glyphicon glyphicon-user"></span>
                                     <?=$_SESSION['user_name']?></a>
                                 </li>
 
@@ -93,7 +94,7 @@
                         else{
                             ?>
                                 <li>
-                                    <a href="dangki.php">Đăng ký</a>
+                                    <a href="dangki.php" style="margin-left: 30px">Đăng ký</a>
                                 </li>
                                  <li>
                                     <a href="dangnhap.php">Đăng nhập</a>
@@ -111,7 +112,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-9">
-                <h1><?=$chitietTin->TieuDe?></h1>
+                <h1><?php echo $chitietTin->tieude;?></h1>
                 <h2 class="lead" style="color: red"><?=$chitietTin->tieude?></h2>
                 <img class="img-responsive" src="assets/image/sanpham/<?=$chitietTin->image?>" alt="">
                 <p><span class="glyphicon glyphicon-time"></span> Posted on</p>

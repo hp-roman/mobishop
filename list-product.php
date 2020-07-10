@@ -79,27 +79,33 @@
                                     <th>Nội Dung</th>
                                     <th>Giá</th>
                                     <th>Thao Tác</th>
+                                    <th></th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php
+                                function formatText($text) {
+                                    return substr($text, 0, 100).'...';
+                                }
                                     foreach($products as $product){
                                         ?>
-                                        <form method="POST" action="delete-product.php?id=<?=$product->id?>">
-                                            <tr>
+                            <form method="POST" action="delete-product.php">
+                                        
+                                            <tr data-pid=<?php echo $product->id;?>>
                                                 <td>
-                                                    <?=$product->tieude?>
+                                                    <?php echo $product->tieude;?>
                                                 </td>
                                                 <td>
-                                                    <?=$product->ten?>
+                                                    <?php echo $product->ten;?>
                                                 </td>
-                                                <td><?=$product->tomtat?></td>
-                                                <td><?=$product->noidung?></td>
+                                                <td><?php echo ($product->tomtat);?></td>
+                                                <td><?php echo ($product->noidung);?></td>
                                                 <td>
-                                                    <?=$product->gia?>
+                                                    <?php echo $product->gia;?>
                                                 </td>
-						<td> <button class="form-control btn btn-success" id="update">UPDATE</button>
+						<td> <button type="button" class="form-control btn btn-success" data-pid=<?php echo $product->id;?> id="update">UPDATE</button>
                                                 <td>
+                                                    <input type="hidden" name="id" value="<?php echo $product->id;?>">
                                                     <input type="submit" name="delete" value="DELETE" class="form-control btn btn-danger">
                                                 </td>
                                             </tr>
@@ -107,6 +113,7 @@
                                         <?php
                                     }
                                 ?>
+
                                 
                             </tbody>
                         </table>

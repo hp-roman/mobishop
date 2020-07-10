@@ -6,7 +6,7 @@ class database
     public $_cursor = NULL;
     
     public function database() {
-        $this->_dbh = new PDO('mysql:host=localhost; dbname=mobishop','root','mobishop');
+        $this->_dbh = new PDO('mysql:host=localhost; dbname=mobishop','root','');
 	$this->_dbh->query('set names "utf8"');
     }
     public function setQuery($sql) {

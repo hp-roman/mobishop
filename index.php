@@ -23,6 +23,14 @@
     <link href="assets/css/shop-homepage.css" rel="stylesheet">
     <link href="assets/css/my.css" rel="stylesheet">
     <link href="assets/css/custom.css" rel="stylesheet">
+    <script>
+        window.onload = () => {
+            const li = document.querySelectorAll('#menu > li');
+            for(const t of li){
+                t.style.cursor = 'pointer';
+            }
+        }
+    </script>
 </head>
 <body>
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
