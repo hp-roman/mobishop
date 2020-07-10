@@ -98,6 +98,7 @@
                                                 <td>
                                                     <?=$product->gia?>
                                                 </td>
+						<td> <button class="form-control btn btn-success" id="update">UPDATE</button>
                                                 <td>
                                                     <input type="submit" name="delete" value="DELETE" class="form-control btn btn-danger">
                                                 </td>

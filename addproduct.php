@@ -76,9 +76,11 @@
                 <!-- /. ROW  -->
                 <div class="row">
                     <div class="col-xs-12">
-                        <?php 
+<?php 
+    if(isset($_SESSION['addsuccess'])){
                             echo "<h3 class='text-center' style='color: blue'>".$_SESSION['addsuccess']."</h3>";
-                            unset($_SESSION['addsuccess']);
+			    unset($_SESSION['addsuccess']);
+    }
                         ?>
                     </div>
                 </div>
