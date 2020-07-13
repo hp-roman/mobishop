@@ -85,7 +85,7 @@ function createModal(id, data) {
   head.append(css);
 }
 
-firstLoad();
+//firstLoad();
 
 (function ($) {
   "use strict";

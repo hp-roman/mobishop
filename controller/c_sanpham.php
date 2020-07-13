@@ -81,6 +81,10 @@
                 $_SESSION['addsuccess'] = "Thêm Sản Phẩm Thành Công";
             }
         }
+        function updateProduct($id, $arr){
+            $m_sanpham = new M_sanpham();
+            $m_sanpham->updateProduct($id, $arr);
+        }
         function getAllProduct(){
             $m_sanpham = new M_sanpham();
             $sanpham = $m_sanpham->getAllProduct();
@@ -92,5 +96,3 @@
         }
         // 
     }
-    
-?>
